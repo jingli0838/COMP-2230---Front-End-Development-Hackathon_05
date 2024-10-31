@@ -4,18 +4,27 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="styles.css" />
-        <title>Cat Fact Explorer</title>
+        <title>Current Weather</title>
     </head>
     <body>
-        <div id="catFactApp">
-            <h1>Explorer</h1>
-            <label for="factCount">Select Number of Facts:</label>
-            <select id="factCount">
-             
-            </select>
-            <button>Get data</button>
-            <div id="factsContainer"></div>
-        </div>
-        <script src="script.js"></script>
+        <header>
+            <h1>Current Weather</h1>
+        </header>
+        <main>
+            <form aria-label="Select city to watch current weather" class="selectForm">
+                <label for="location">Select a city:</label>
+                <select  id="location" name="location">
+                    <option>Winnipeg</option>
+                    <option>Toronto</option>
+                    <option>Montreal</option>
+                    <option>Vancouver</option>
+                    <option>New York</option>
+                    <option>Chengdu</option>
+                </select>
+                <button type="button" id="loadButton">View Weather</button>
+            </form>
+            <section id="weatherDataContainer"></section>
+        </main>
+        <script src="script.js" type="module"></script>   
     </body>
 </html>
