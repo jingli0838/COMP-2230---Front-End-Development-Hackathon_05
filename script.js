@@ -2,7 +2,7 @@
 import { keyValue } from './external.js';
 
 const baseUrl= "http://api.weatherstack.com/current";
-// ? access_key = f11b3154bd997ff6cde1f12a14dae528
+
 const myApiKey = keyValue;
 const selectNode = document.getElementById("location");
 const loadButton = document.getElementById("loadButton");
@@ -19,7 +19,6 @@ async  function fetchData(location){
         if(!response.ok){
             throw new Error(`HTTP Error: ${response.status}`);  
         }
-
         const currentData = await response.json();
         console.log(currentData);
         // destructuring data
@@ -37,12 +36,18 @@ async  function fetchData(location){
     } catch(error){
         console.error(`Failed to fetch: ${error.message}`);
     }
-
 }
 
 loadButton.addEventListener("click", async() => {
     //Clear the old data
     containerNode.innerHTML ="";
+
+    if(!selectNode.value){
+        const errorNode = document.createElement('p');
+        errorNode.innerHTML = "A city is required. Please select a city."
+        containerNode.appendChild(errorNode);
+        return;
+    }
     const location = selectNode.value;
     const weatherDate = await fetchData(location);
 

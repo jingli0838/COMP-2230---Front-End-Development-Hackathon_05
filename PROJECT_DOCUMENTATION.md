@@ -2,13 +2,13 @@
 
 ## Project Overview
 
-[Provide a brief summary of the project, including the theme and objectives.]
+We chose a url API to get the current weather information of selected countries and display the selected information on the webpage.
 
 ## Team Members:
 
 -   Name 1 : Jing Li
 -   Name 2 : Odudu-Abasi Jackson
--   Name 3
+
 
 ## Member Contributions:
 
@@ -18,8 +18,4 @@
 
 ### Name 2:
 
--   Was responsible for [specific tasks], focusing on [specific HTML elements].
-
-### Name 3:
-
--   Handled [specific sections], covering [specific topics or features].
+-   Was responsible for test and styles.css, focusing on designing.
